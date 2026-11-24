@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusTech Soluções | Engenharia de Software & Cloud</title>
+  
+  <!-- Fontes e Ícones -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- CSS Externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navegação -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#" class="logo">
+        <div class="logo-icon"><i data-lucide="cpu"></i></div>
+        <span>Nexus<strong>Tech</strong></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Orçamento</a>
+        <button id="btnOpenAdmin" class="btn-admin">
+          <i data-lucide="database"></i>
+          <span>Painel Leads</span>
+          <span class="badge-count" id="leadCountBadge">0</span>
+        </button>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <div class="pill-badge">
+        <span class="pulse-dot"></span> Engenharia de Software de Alta Performance
+      </div>
+      <h1>Transformamos ideias complexas em <span class="gradient-text">software escalável</span>.</h1>
+      <p>Desenvolvimento web, aplicativos nativos, arquitetura em nuvem e inteligência artificial sob medida para acelerar a operação da sua empresa.</p>
+      
+      <div class="hero-actions">
+        <a href="#contato" class="btn btn-primary">
+          Solicitar Orçamento <i data-lucide="arrow-right"></i>
+        </a>
+        <a href="#portfolio" class="btn btn-secondary">Ver Cases de Sucesso</a>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <h3>+140</h3>
+          <p>Sistemas Entregues</p>
+        </div>
+        <div class="metric-card">
+          <h3>99.98%</h3>
+          <p>Uptime em Produção</p>
+        </div>
+        <div class="metric-card">
+          <h3>3.5x</h3>
+          <p>ROI Médio dos Clientes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nossas Especialidades</span>
+        <h2>Soluções Tecnológicas Ponta a Ponta</h2>
+        <p>Arquitetura moderna focada em segurança, velocidade e experiência do usuário.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i data-lucide="globe"></i></div>
+          <h3>Sistemas Web & SaaS</h3>
+          <p>Plataformas multi-tenant, dashboards analíticos e ERPs customizados com React, Node.js e Python.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i data-lucide="smartphone"></i></div>
+          <h3>Aplicativos Mobile</h3>
+          <p>Apps iOS e Android nativos ou híbridos com alta fluidez, pagamentos integrados e notificações push.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i data-lucide="bot"></i></div>
+          <h3>IA & Automação</h3>
+          <p>Agentes inteligentes, integração com LLMs, processamento de dados e automação de fluxos corporativos.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i data-lucide="cloud"></i></div>
+          <h3>Cloud & DevOps</h3>
+          <p>Infraestrutura escalável na AWS e Google Cloud, pipelines CI/CD e monitoramento 24/7.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfólio -->
+  <section id="portfolio" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfólio</span>
+        <h2>Projetos em Destaque</h2>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="web">Web / SaaS</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="ia">IA & Dados</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+        <article class="project-card" data-category="web">
+          <div class="project-banner banner-1"><span>FinTech Core</span></div>
+          <div class="project-info">
+            <span class="project-cat">Web / SaaS</span>
+            <h3>Banco Digital B2B</h3>
+            <p>Plataforma completa de gestão de tesouraria, PIX automatizado e conciliação bancária em tempo real.</p>
+            <div class="tech-tags"><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="mobile">
+          <div class="project-banner banner-2"><span>LogiTrack App</span></div>
+          <div class="project-info">
+            <span class="project-cat">Mobile</span>
+            <h3>Rastreamento Inteligente de Frotas</h3>
+            <p>Aplicativo para motoristas com roteirização offline, telemetria e assinatura digital de entregas.</p>
+            <div class="tech-tags"><span>React Native</span><span>Firebase</span><span>Maps API</span></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="ia">
+          <div class="project-banner banner-3"><span>NexusAI Support</span></div>
+          <div class="project-info">
+            <span class="project-cat">IA & Dados</span>
+            <h3>Atendimento Cognitivo Omnichannel</h3>
+            <p>Assistente virtual treinado na base de conhecimento da empresa, reduzindo em 68% os chamados humanos.</p>
+            <div class="tech-tags"><span>Python</span><span>Gemini API</span><span>Docker</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário de Contato (Conectado ao Banco de Dados) -->
+  <section id="contato" class="section">
+    <div class="container contact-wrapper">
+      <div class="contact-info">
+        <span class="section-tag">Vamos Conversar</span>
+        <h2>Inicie seu projeto com a NexusTech</h2>
+        <p>Preencha os detalhes abaixo. Nossa equipe de arquitetura analisará seu escopo e retornará em até 24 horas úteis.</p>
+        
+        <ul class="contact-perks">
+          <li><i data-lucide="check-circle-2"></i> Reunião de discovery gratuita</li>
+          <li><i data-lucide="check-circle-2"></i> NDA (Acordo de Confidencialidade) garantido</li>
+          <li><i data-lucide="check-circle-2"></i> Estimativa detalhada de prazo e investimento</li>
+        </ul>
+      </div>
+
+      <form id="leadForm" class="glass-form">
+        <div class="form-group">
+          <label for="nome">Nome Completo *</label>
+          <input type="text" id="nome" required placeholder="Ex: Ana Paula Silva">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">E-mail Corporativo *</label>
+            <input type="email" id="email" required placeholder="ana@empresa.com.br">
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa</label>
+            <input type="text" id="empresa" placeholder="Nome da empresa">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="servico">Tipo de Solução *</label>
+            <select id="servico" required>
+              <option value="Sistema Web / SaaS">Sistema Web / SaaS</option>
+              <option value="Aplicativo Mobile">Aplicativo Mobile</option>
+              <option value="IA & Automação">IA & Automação</option>
+              <option value="Cloud & DevOps">Cloud & DevOps</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="orcamento">Investimento Estimado *</label>
+            <select id="orcamento" required>
+              <option value="R$ 15k - R$ 30k">R$ 15k - R$ 30k</option>
+              <option value="R$ 30k - R$ 70k">R$ 30k - R$ 70k</option>
+              <option value="Acima de R$ 70k">Acima de R$ 70k</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="descricao">Detalhes do Projeto *</label>
+          <textarea id="descricao" rows="4" required placeholder="Descreva os objetivos principais, integrações necessárias ou prazos..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full" id="btnSubmit">
+          <span>Enviar Solicitação</span>
+          <i data-lucide="send"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 NexusTech Soluções em Software Ltda. Todos os direitos reservados.</p>
+      <div class="db-status" id="dbStatus">
+        <span class="status-dot"></span> Conectando ao banco de dados...
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Painel Administrativo (CRUD no Banco de Dados) -->
+  <div class="modal-overlay" id="adminModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <h3><i data-lucide="database"></i> Gerenciador de Leads (Banco de Dados)</h3>
+          <p>Sincronização em tempo real com Firebase Firestore</p>
+        </div>
+        <button class="btn-close" id="btnCloseAdmin"><i data-lucide="x"></i></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="table-responsive">
+          <table class="leads-table">
+            <thead>
+              <tr>
+                <th>Cliente / Empresa</th>
+                <th>Solução</th>
+                <th>Orçamento</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="leadsTableBody">
+              <tr><td colspan="5" class="empty-msg">Carregando registros...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notificação Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- JavaScript Externo (Module para Firebase) -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
